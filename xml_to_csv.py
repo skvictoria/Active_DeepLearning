@@ -1,7 +1,9 @@
 import os
 import glob
 import pandas as pd
-import xml.etree.ElementTree as ETdef xml_to_csv(path):
+import xml.etree.ElementTree as ET
+
+def xml_to_csv(path):
     xml_list = []
     for xml_file in glob.glob(path + '/*.xml'):
         tree = ET.parse(xml_file)
@@ -24,4 +26,6 @@ import xml.etree.ElementTree as ETdef xml_to_csv(path):
         image_path = os.path.join(os.getcwd(), 'images/{}'.format(Image_cat))
         xml_df = xml_to_csv(image_path) 
         xml_df.to_csv('data/{}_labels.csv'.format(Image_cat), index=None)
-        print('Successfully converted xml to csv.')main(['train','test'])
+        print('Successfully converted xml to csv.')
+        
+    main(['train','test'])
