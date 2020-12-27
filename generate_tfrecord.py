@@ -49,7 +49,7 @@ def create_tf_example(group, path):
     encoded_jpg_io = io.BytesIO(encoded_jpg)
     image = Image.open(encoded_jpg_io)
     width, height = image.size
-filename = group.filename.encode('utf8')
+    filename = group.filename.encode('utf8')
     image_format = b'jpg'
     # check if the image format is matching with your images.
     xmins = []
@@ -58,14 +58,14 @@ filename = group.filename.encode('utf8')
     ymaxs = []
     classes_text = []
     classes = []
-for index, row in group.object.iterrows():
+    for index, row in group.object.iterrows():
         xmins.append(row['xmin'] / width)
         xmaxs.append(row['xmax'] / width)
         ymins.append(row['ymin'] / height)
         ymaxs.append(row['ymax'] / height)
         classes_text.append(row['class'].encode('utf8'))
         classes.append(class_text_to_int(row['class']))
-tf_example = tf.train.Example(features=tf.train.Features(feature={
+    tf_example = tf.train.Example(features=tf.train.Features(feature={
         'image/height': dataset_util.int64_feature(height),
         'image/width': dataset_util.int64_feature(width),
         'image/filename': dataset_util.bytes_feature(filename),
@@ -88,7 +88,7 @@ def main(_):
     for group in grouped:
         tf_example = create_tf_example(group, path)
         writer.write(tf_example.SerializeToString())
-writer.close()
+    writer.close()
     output_path = os.path.join(os.getcwd(), FLAGS.output_path)
     print('Successfully created the TFRecords: {}'.format(output_path))
 if __name__ == '__main__':
