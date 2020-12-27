@@ -22,15 +22,15 @@ from object_detection.utils import dataset_util
 from collections import namedtuple, OrderedDict
 
 flags = tf.app.flags
-flags.DEFINE_string('csv_input', '', 'Path to the CSV input')
-flags.DEFINE_string('output_path', '', 'Path to output TFRecord')
+flags.DEFINE_string('csv_input', '', '/home/john/project/repos/models/research/object_detection/csvlabeling')
+flags.DEFINE_string('output_path', '', '/home/john/project/repos/models/research/object_detection')
 # flags.DEFINE_string('label', '', 'Name of class label')
 # if your image has more labels input them as
 #flags.DEFINE_string('label0', '', 'Name of class[0] label')
 #flags.DEFINE_string('label1', '', 'Name of class[1] label')
 #flags.DEFINE_string('label2', '', 'Name of class[2] label')
 # and so on.
-flags.DEFINE_string('img_path', '', 'Path to images')
+flags.DEFINE_string('img_path', '', '/home/john/project/repos/models/research/object_detection/train')
 FLAGS = flags.FLAGS
 
 
@@ -46,6 +46,8 @@ def class_text_to_int(row_label):
         return 2
     elif row_label == 'scorch':
         return 3
+    elif row_label == 'normal':
+        return 4
     else:
         None
 
