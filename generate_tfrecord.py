@@ -1,9 +1,9 @@
 """
 Usage:
 # Create train data:
-python generate_tfrecord.py --label=<LABEL> --csv_input=<PATH_TO_ANNOTATIONS_FOLDER>/train_labels.csv  --output_path=<PATH_TO_ANNOTATIONS_FOLDER>/train.record
+python generate_tfrecord.py --csv_input=<PATH_TO_ANNOTATIONS_FOLDER>/train_labels.csv  --output_path=<PATH_TO_ANNOTATIONS_FOLDER>/train.record
 # Create test data:
-python generate_tfrecord.py --label=<LABEL> --csv_input=<PATH_TO_ANNOTATIONS_FOLDER>/test_labels.csv  --output_path=<PATH_TO_ANNOTATIONS_FOLDER>/test.record
+python generate_tfrecord.py --csv_input=<PATH_TO_ANNOTATIONS_FOLDER>/test_labels.csv  --output_path=<PATH_TO_ANNOTATIONS_FOLDER>/test.record
 """
 
 from __future__ import division
@@ -26,9 +26,9 @@ flags.DEFINE_string('csv_input', '', 'Path to the CSV input')
 flags.DEFINE_string('output_path', '', 'Path to output TFRecord')
 # flags.DEFINE_string('label', '', 'Name of class label')
 # if your image has more labels input them as
-flags.DEFINE_string('label0', '', 'Name of class[0] label')
-flags.DEFINE_string('label1', '', 'Name of class[1] label')
-flags.DEFINE_string('label2', '', 'Name of class[2] label')
+#flags.DEFINE_string('label0', '', 'Name of class[0] label')
+#flags.DEFINE_string('label1', '', 'Name of class[1] label')
+#flags.DEFINE_string('label2', '', 'Name of class[2] label')
 # and so on.
 flags.DEFINE_string('img_path', '', 'Path to images')
 FLAGS = flags.FLAGS
@@ -40,12 +40,12 @@ def class_text_to_int(row_label):
     #if row_label == FLAGS.label:  # 'ship':
     #    return 1
     # comment upper if statement and uncomment these statements for multiple labelling
-    if row_label == FLAGS.label0:
-        return 2
-    elif row_label == FLAGS.label1:
-        return 1
-    elif row_label == FLAGS.label2:
+    if row_label == 'eungae':
         return 0
+    elif row_label == 'gray_mold':
+        return 1
+    elif row_label == 'scorch':
+        return 2
     else:
         None
 
@@ -113,4 +113,4 @@ def main(_):
 
 
 if __name__ == '__main__':
-    tf.compat.v1.app.run()
+    tf.app.run()
