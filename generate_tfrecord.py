@@ -40,7 +40,7 @@ def class_text_to_int(row_label):
     #if row_label == FLAGS.label:  # 'ship':
     #    return 1
     # comment upper if statement and uncomment these statements for multiple labelling
-    if row_label == 'eungae':
+    if row_label == 'Tetranychus Urticae':
         return 0
     elif row_label == 'gray_mold':
         return 1
