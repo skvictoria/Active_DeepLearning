@@ -12,6 +12,11 @@ optional arguments:
                         The ratio of the number of test images over the total number of images. The default is 0.1.
   -x, --xml             Set this flag if you want the xml annotation files to be processed and copied over.
 """
+# python partition_dataset.py -x -i [PATH_TO_IMAGES_FOLDER] -r 0.1
+
+# For example
+# python partition_dataset.py -x -i C:/Users/sglvladi/Documents/Tensorflow/workspace/training_demo/images -r 0.1
+
 import os
 import re
 from shutil import copyfile
