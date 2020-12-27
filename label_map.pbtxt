@@ -1,0 +1,14 @@
+item {
+    id: 1
+    name: 'eungae'
+}
+
+item {
+    id: 2
+    name: 'gray_mold'
+}
+
+item{
+    id: 3
+    name: 'scorch'
+}
