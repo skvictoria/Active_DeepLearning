@@ -22,11 +22,12 @@ def xml_to_csv(path):
     column_name = ['filename', 'width', 'height', 'class', 'xmin', 'ymin', 'xmax', 'ymax']
     xml_df = pd.DataFrame(xml_list, columns=column_name)
     return xml_df
+
 def main(directory_list):
-    for Image_cat in directory_list:
-        image_path = os.path.join(os.getcwd(), 'images/{}'.format(Image_cat))
+    for Image_strawberry in directory_list:
+        image_path = os.path.join(os.getcwd(), 'images/{}'.format(Image_strawberry))
         xml_df = xml_to_csv(image_path) 
-        xml_df.to_csv('data/{}_labels.csv'.format(Image_cat), index=None)
+        xml_df.to_csv('data/{}_labels.csv'.format(Image_strawberry), index=None)
         print('Successfully converted xml to csv.')
         
-main(['train','test'])
+main(['train','val','test'])
