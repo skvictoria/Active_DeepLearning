@@ -41,11 +41,11 @@ def class_text_to_int(row_label):
     #    return 1
     # comment upper if statement and uncomment these statements for multiple labelling
     if row_label == 'Tetranychus Urticae':
-        return 0
-    elif row_label == 'gray_mold':
         return 1
-    elif row_label == 'scorch':
+    elif row_label == 'gray_mold':
         return 2
+    elif row_label == 'scorch':
+        return 3
     else:
         None
 
@@ -64,7 +64,7 @@ def create_tf_example(group, path):
     width, height = image.size
 
     filename = group.filename.encode('utf8')
-    image_format = b'jpg'
+    image_format = (b'jpg' || b'JPG')
     # check if the image format is matching with your images.
     xmins = []
     xmaxs = []
