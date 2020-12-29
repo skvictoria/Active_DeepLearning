@@ -13,7 +13,7 @@ from __future__ import absolute_import
 import os
 import io
 import pandas as pd
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import sys
 sys.path.append("../../models/research")
 
@@ -104,7 +104,7 @@ def create_tf_example(group, path, image_format):
 
 def main(_):
     writer = tf.python_io.TFRecordWriter(FLAGS.output_path)
-    path = os.path.join(os.getcwd(), FLAGS.img_path)
+    path = os.path.join(os.getcwd(), FLAGS.image_dir)
     examples = pd.read_csv(FLAGS.low_csv_input)
     grouped = split(examples, 'filename')
     for group in grouped:
