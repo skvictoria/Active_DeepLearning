@@ -21,5 +21,11 @@
 
   > python model_builder_test.py
 
+## tensorflow/models/research/object_detection
+- in object_detection folder
+
+(example)
+  > python generate_tfrecord.py --big_csv_input=/home/john/project/repos/models/research/object_detection/images/csvlowbiglabeling/train_bigger.csv --low_csv_input=/home/john/project/repos/models/research/object_detection/images/csvlowbiglabeling/train_lower.csv --image_dir=/home/john/project/repos/models/research/object_detection/images/train --output_path=/home/john/project/repos/models/research/object_detection/train.record
 
 #### https://medium.com/analytics-vidhya/training-an-object-detection-model-with-tensorflow-api-using-google-colab-4f9a688d5e8b <- very useful!
+
