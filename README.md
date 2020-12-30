@@ -24,6 +24,15 @@
 ## tensorflow/models/research/object_detection
 - in object_detection folder
 
+## tensorflow/models/research/object_detection
+> PIPELINE_CONFIG_PATH=/home/john/project/repos/models/research/object_detection/samples/configs/faster_rcnn_resnet50_coco.config
+
+> MODEL_DIR=/dhome/john/DLstorage/result
+
+> NUM_TRAIN_STEPS=10000000
+
+> python object_detection/model_main.py --pipeline_config_path=${PIPELINE_CONFIG_PATH} --model_dir=${MODEL_DIR} --num_train_steps=${NUM_TRAIN_STEPS} --alsologtostderr
+
 (example)
   > python generate_tfrecord.py --big_csv_input=/home/john/project/repos/models/research/object_detection/images/csvlowbiglabeling/train_bigger.csv --low_csv_input=/home/john/project/repos/models/research/object_detection/images/csvlowbiglabeling/train_lower.csv --image_dir=/home/john/project/repos/models/research/object_detection/images/train --output_path=/home/john/project/repos/models/research/object_detection/train.record
 
