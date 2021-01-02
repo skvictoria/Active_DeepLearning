@@ -25,13 +25,13 @@
 - in object_detection folder
 
 ## tensorflow/models/research/object_detection
-> PIPELINE_CONFIG_PATH=/home/john/project/repos/models/research/object_detection/samples/configs/faster_rcnn_resnet50_coco.config
+> PIPELINE_CONFIG_PATH=/home/john/DLstorage/repos/models/research/object_detection/samples/configs/faster_rcnn_resnet101_coco.config
 
-> MODEL_DIR=/dhome/john/DLstorage/result
+> MODEL_DIR=/home/john/DLstorage/result
 
 > NUM_TRAIN_STEPS=10000000
 
-> python object_detection/model_main.py --pipeline_config_path=${PIPELINE_CONFIG_PATH} --model_dir=${MODEL_DIR} --num_train_steps=${NUM_TRAIN_STEPS} --alsologtostderr
+> python model_main_tf2.py --pipeline_config_path=${PIPELINE_CONFIG_PATH} --model_dir=${MODEL_DIR} --num_train_steps=${NUM_TRAIN_STEPS} --alsologtostderr
 
 > python legacy/train.py --pipeline_config_path=/home/john/project/repos/models/research/object_detection/samples/configs/faster_rcnn_resnet101_coco.config --train_dir=/home/john/DLstorage/result --logtostderr --worker_replicas=1 --num_clones=1 --ps_tasks=1
 
