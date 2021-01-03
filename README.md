@@ -4,7 +4,7 @@
 ## VOTT labeling tool
 
 
-## tensorflow/models/research 
+## tensorflow/models api 
 - research 폴더에서
 
   > protoc object_detection/protos/*.proto --python_out=.
@@ -21,7 +21,6 @@
 
   > python model_builder_test.py
 
-## tensorflow/models/research/object_detection
 - object_detection 폴더에서
 
   > PIPELINE_CONFIG_PATH=/home/john/DLstorage/repos/models/research/object_detection/samples/configs/faster_rcnn_resnet101_coco.config
@@ -34,7 +33,7 @@
 
   > python legacy/train.py --pipeline_config_path=/home/john/project/repos/models/research/object_detection/samples/configs/faster_rcnn_resnet101_coco.config       --train_dir=/home/john/DLstorage/result --logtostderr --worker_replicas=1 --num_clones=1 --ps_tasks=1
 
-(example)
+  (example)
   > python generate_tfrecord.py --big_csv_input=/home/john/project/repos/models/research/object_detection/images/csvlowbiglabeling/train_bigger.csv --low_csv_input=/home/john/project/repos/models/research/object_detection/images/csvlowbiglabeling/train_lower.csv --image_dir=/home/john/project/repos/models/research/object_detection/images/train --output_path=/home/john/project/repos/models/research/object_detection/train.record
 
 #### https://medium.com/analytics-vidhya/training-an-object-detection-model-with-tensorflow-api-using-google-colab-4f9a688d5e8b <- useful
