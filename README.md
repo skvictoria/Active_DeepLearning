@@ -22,23 +22,22 @@
   > python model_builder_test.py
 
 ## tensorflow/models/research/object_detection
-- in object_detection folder
+- object_detection 폴더에서
 
-## tensorflow/models/research/object_detection
-> PIPELINE_CONFIG_PATH=/home/john/DLstorage/repos/models/research/object_detection/samples/configs/faster_rcnn_resnet101_coco.config
+  > PIPELINE_CONFIG_PATH=/home/john/DLstorage/repos/models/research/object_detection/samples/configs/faster_rcnn_resnet101_coco.config
 
-> MODEL_DIR=/home/john/DLstorage/result
+  > MODEL_DIR=/home/john/DLstorage/result
 
-> NUM_TRAIN_STEPS=10000000
+  > NUM_TRAIN_STEPS=10000000
 
-> python model_main_tf2.py --pipeline_config_path=${PIPELINE_CONFIG_PATH} --model_dir=${MODEL_DIR} --num_train_steps=${NUM_TRAIN_STEPS} --alsologtostderr
+  > python model_main_tf2.py --pipeline_config_path=${PIPELINE_CONFIG_PATH} --model_dir=${MODEL_DIR} --num_train_steps=${NUM_TRAIN_STEPS} --alsologtostderr
 
-> python legacy/train.py --pipeline_config_path=/home/john/project/repos/models/research/object_detection/samples/configs/faster_rcnn_resnet101_coco.config --train_dir=/home/john/DLstorage/result --logtostderr --worker_replicas=1 --num_clones=1 --ps_tasks=1
+  > python legacy/train.py --pipeline_config_path=/home/john/project/repos/models/research/object_detection/samples/configs/faster_rcnn_resnet101_coco.config       --train_dir=/home/john/DLstorage/result --logtostderr --worker_replicas=1 --num_clones=1 --ps_tasks=1
 
 (example)
   > python generate_tfrecord.py --big_csv_input=/home/john/project/repos/models/research/object_detection/images/csvlowbiglabeling/train_bigger.csv --low_csv_input=/home/john/project/repos/models/research/object_detection/images/csvlowbiglabeling/train_lower.csv --image_dir=/home/john/project/repos/models/research/object_detection/images/train --output_path=/home/john/project/repos/models/research/object_detection/train.record
 
-#### https://medium.com/analytics-vidhya/training-an-object-detection-model-with-tensorflow-api-using-google-colab-4f9a688d5e8b <- very useful!
+#### https://medium.com/analytics-vidhya/training-an-object-detection-model-with-tensorflow-api-using-google-colab-4f9a688d5e8b <- useful
 
-#### https://medium.com/@shubham.borikar/train-tensorflow-object-detection-api-on-custom-dataset-839ebb93dddc <- very useful!
+#### https://medium.com/@shubham.borikar/train-tensorflow-object-detection-api-on-custom-dataset-839ebb93dddc <- useful
 
