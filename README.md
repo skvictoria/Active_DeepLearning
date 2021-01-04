@@ -35,6 +35,8 @@
 
   (example)
   > python generate_tfrecord.py --csv_input=/home/john/DLstorage/repos/models/research/object_detection/images/images/train_labels.csv --image_dir=/home/john/DLstorage/repos/models/research/object_detection/images/images/train --output_path=/home/john/DLstorage/train.record
+  
+  > python legacy/eval.py --checkpoint_dir=/home/john/DLstorage/result_jpg --eval_dir=./test_images --pipeline_config_path=./samples/configs/faster_rcnn_resnet101_coco.config
 
 #### https://medium.com/analytics-vidhya/training-an-object-detection-model-with-tensorflow-api-using-google-colab-4f9a688d5e8b <- useful
 
