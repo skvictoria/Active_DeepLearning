@@ -54,7 +54,7 @@ def load_image_into_numpy_array(image):
 
 ###STATING THE PATH TO IMAGES TO BE TESTED
 PATH_TO_TEST_IMAGES_DIR = 'test_images/'
-TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'image{}.jpg'.format(i)) for i in range(1, 4) ]
+TEST_IMAGE_PATHS = [ imae_name for i, image_name in enumerate(glob.glob(os.path.join(PATH_TO_TEST_IMAGES_DIR,'*.jpg'))) ]
 IMAGE_SIZE = (12, 8)
 
 
