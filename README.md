@@ -42,3 +42,10 @@
 
 #### https://medium.com/@shubham.borikar/train-tensorflow-object-detection-api-on-custom-dataset-839ebb93dddc <- useful
 
+2020 ver
+
+https://neptune.ai/blog/how-to-train-your-own-object-detector-using-tensorflow-object-detection-api
+
+https://medium.com/swlh/tensorflow-2-object-detection-api-with-google-colab-b2af171e81cc
+
+https://medium.com/@deep12vish/tensorflow-object-detection-in-windows-under-30-lines-d6776586c4ab
